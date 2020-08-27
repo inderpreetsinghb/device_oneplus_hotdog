@@ -12,10 +12,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/hotdog/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/one/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_hotdog
+PRODUCT_NAME := one_hotdog
 PRODUCT_DEVICE := hotdog
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := OnePlus 7T Pro
@@ -24,6 +24,9 @@ PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_CHARACTERISTICS := nosdcard
+
+# Face Unlock
+TARGET_GAPPS_ARCH := arm64
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 3120

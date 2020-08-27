@@ -1,0 +1,9 @@
+type hal_camera_motor_msmnile, coredomain, domain;
+hal_server_domain(hal_camera_motor_msmnile, hal_one_camera_motor)
+
+type hal_camera_motor_msmnile_exec, exec_type, file_type, system_file_type;
+init_daemon_domain(hal_camera_motor_msmnile)
+
+allow hal_camera_motor_msmnile sysfs_motor:file rw_file_perms;
+allow hal_camera_motor_msmnile sysfs_motor:dir { search };
+allow system_app sysfs_motor:file read;
